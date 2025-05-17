@@ -14,9 +14,9 @@ Error handling for invalid inputs.
 # How to Run
 1.Ensure you have Python 3 installed.
 2.Run the debug.py script to see example usage and output:
- python3 debug.py
+          python3 debug.py
  3.To run tests (if any), use your preferred test runner, for example:
-  pytest tests/
+           pytest tests/
 
 # Error Cases
 Creating an order with invalid customer or coffee types will raise a TypeError.
