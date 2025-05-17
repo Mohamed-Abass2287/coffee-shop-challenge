@@ -3,30 +3,33 @@ from coffee import Coffee
 from order import Order
 
 # Create Customers
-gedi = Customer("gedi")
 gabriel = Customer("gabriel")
+gedi = Customer("gedi")
 
 # Create Coffees
 latte = Coffee("Latte")
 espresso = Coffee("Espresso")
 
 # Create Orders
-order1 = Order(gedi, latte, 3.5)
-order2 = Order(gedi, espresso, 2.75)
-order3 = Order(gabriel, latte, 4.0)
+order1 = Order(gabriel, latte, 3.5)
+order2 = Order(gabriel, espresso, 2.75)
+order3 = Order(gedi, latte, 4.0)
 
 # Print out data to verify correctness
 print("=== Customers ===")
-print(gedi.name)  
-print(gabriel.name)    
+print(gabriel.name)  # Gabriel
+print(gedi.name)     # Gedi
 
 print("\n=== Coffees ===")
-print(latte.name)      
-print(espresso.name)  
+print(latte.name)      # Latte
+print(espresso.name)   # Espresso
 
 print("\n=== Orders ===")
 print(f"Order1: {order1.customer.name} ordered {order1.coffee.name} for ${order1.price}")
 print(f"Order2: {order2.customer.name} ordered {order2.coffee.name} for ${order2.price}")
 print(f"Order3: {order3.customer.name} ordered {order3.coffee.name} for ${order3.price}")
 
-
+# Test error cases (uncomment to test)
+# invalid_customer = Order("NotACustomer", latte, 3.5)  # Should raise TypeError
+# invalid_price = Order(gabriel, latte, 20.0)           # Should raise ValueError
+# short_coffee = Coffee("A")                            # Should raise ValueError

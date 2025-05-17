@@ -14,14 +14,14 @@ class TestOrder:
         with pytest.raises(TypeError):
             Order("not customer", Coffee("Latte"), 5.0)
         with pytest.raises(TypeError):
-            Order(Customer("Bob"), "not coffee", 5.0)
+            Order(Customer("Gedi"), "not coffee", 5.0)
         with pytest.raises(TypeError):
-            Order(Customer("Bob"), Coffee("Latte"), "5")
+            Order(Customer("Gedi"), Coffee("Latte"), "5")
         with pytest.raises(ValueError):
-            Order(Customer("Bob"), Coffee("Latte"), 0.5)
+            Order(Customer("Gedi"), Coffee("Latte"), 0.5)
     
     def test_order_price_immutable(self):
-        customer = Customer("Alice")
+        customer = Customer("Gabriel")
         coffee = Coffee("Macchiato")
         order = Order(customer, coffee, 6.0)
         with pytest.raises(AttributeError):

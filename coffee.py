@@ -24,3 +24,6 @@ class Coffee:
         if not self._orders:
             return 0
         return sum(order.price for order in self._orders) / len(self._orders)
+    
+
+    # print("kahawa tamu.")

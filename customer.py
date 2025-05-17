@@ -31,3 +31,12 @@ class Customer:
             customer = order.customer
             customer_totals[customer] = customer_totals.get(customer, 0) + order.price
         return max(customer_totals, key=customer_totals.get, default=None)
+    print("Customer class imeenda.")
+
+
+# mifano zaidi/////
+# customer = Customer("John Doe")
+# coffee = Coffee("Espresso")   
+# order = customer.create_order(coffee, 5.0)
+# print(customer.name)  # Output: John Doe
+# print(order.price)  # Output: 5.0

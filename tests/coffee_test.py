@@ -30,3 +30,5 @@ class TestCoffee:
         Order(customer1, coffee, 5.0)
         Order(customer2, coffee, 7.0)
         assert coffee.average_price() == 6.0
+
+    
